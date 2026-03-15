@@ -6,15 +6,11 @@ export const Footer = () => {
                     © {new Date().getFullYear()} Ali Tarek. All rights reserved.
                 </div>
 
-                <div className="flex items-center gap-1 text-[13px] text-text-secondary">
-                    <a href="https://github.com/sudoenvx" target="_blank" rel="noopener noreferrer" className="bg-primary text-primary-text px-4 py-1 rounded-full hover:bg-primary/80 transition-colors">
-                        GitHub
-                    </a>
-                    <a href="https://linkedin.com/in/sudoenvx" target="_blank" rel="noopener noreferrer" className="bg-primary text-primary-text px-4 py-1 rounded-full hover:bg-primary/80 transition-colors">
-                        LinkedIn
-                    </a>
-                    <a href="https://twitter.com/sudoenvx" target="_blank" rel="noopener noreferrer" className="bg-primary text-primary-text px-4 py-1 rounded-full hover:bg-primary/80 transition-colors">
-                        Twitter
+                <div className="flex items-center gap-2 text-[13px] text-secondary-text">
+                    <span className="hidden sm:inline">Open for collaborations</span>
+                    <span className="hidden sm:inline">•</span>
+                    <a href="mailto:hello@alirtarek.com" className="bg-primary text-primary-text px-4 py-1 rounded-full hover:bg-primary/80 transition-colors">
+                        hello@alirtarek.com
                     </a>
                 </div>
             </div>
