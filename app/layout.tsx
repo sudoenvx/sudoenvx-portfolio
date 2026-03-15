@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import AppLayout from "@/components/layout/app-layout";
 
 export const metadata: Metadata = {
   title: "Ali Tarek — Fullstack Engineer | System Architect",
@@ -21,7 +22,9 @@ export default function RootLayout({
       <body
         className={`antialiased`}
       >
-        {children}
+        <AppLayout>
+          {children}
+        </AppLayout>
       </body>
     </html>
   );
