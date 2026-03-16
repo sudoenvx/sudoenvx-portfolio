@@ -12,6 +12,7 @@ import { Card } from "@/components/ui/card";
 import { SectionLabel } from "@/src/domains/home/components/section-label";
 import { projects } from "@/src/data/projects";
 import { Contact } from "@/src/domains/home/components/contact";
+import { ProjectGallery } from "@/components/projects/project_gallery";
 
 type PageProps = {
   params: { id: string };
@@ -65,13 +66,13 @@ export default async function ProjectDetailsPage({ params }: PageProps) {
           className="inline-flex items-center gap-2 text-[13px] text-text-muted hover:text-primary transition-colors"
         >
           <ArrowLeft className="w-4 h-4" />
-          Back to Projects
+          <span>Back to Projects</span>
         </Link>
       </div>
 
       <div className="grid gap-6 lg:grid-cols-[1.1fr_0.9fr] items-start mb-11">
         <div>
-          <h1 className="font-playfair text-[22px] sm:text-[24px] md:text-[26px] font-bold text-text-primary mb-3">
+          <h1 className="text-[22px] sm:text-[24px] md:text-[26px] font-bold text-white mb-3">
             {project.name}
           </h1>
           <p className="text-[15px] text-text-secondary leading-[1.7] font-light mb-4">
@@ -195,7 +196,7 @@ export default async function ProjectDetailsPage({ params }: PageProps) {
               <div className="flex flex-col gap-2 text-[13.5px] text-text-secondary leading-[1.6]">
                 {block.items?.map((item, index) => (
                   <div key={index} className="flex items-start gap-2.5">
-                    <ChevronRight className="w-4 h-4 text-accent mt-0.5" />
+                    <ChevronRight className="w-4 h-4 text-accent mt-0.5 shrink-0" />
                     <span>{item}</span>
                   </div>
                 ))}
@@ -214,7 +215,7 @@ export default async function ProjectDetailsPage({ params }: PageProps) {
                 key={index}
                 className="flex items-start gap-2.5 text-[13.5px] text-text-secondary"
               >
-                <ChevronRight className="w-4 h-4 text-accent mt-0.5" />
+                <ChevronRight className="w-4 h-4 text-accent mt-0.5 shrink-0" />
                 <span>{decision}</span>
               </div>
             ))}
@@ -253,7 +254,7 @@ export default async function ProjectDetailsPage({ params }: PageProps) {
                 key={index}
                 className="flex items-start gap-2.5 text-[13.5px] text-text-secondary"
               >
-                <ChevronRight className="w-4 h-4 text-accent mt-0.5" />
+                <ChevronRight className="w-4 h-4 text-accent mt-0.5 shrink-0" />
                 <span>{item}</span>
               </div>
             ))}
@@ -270,7 +271,7 @@ export default async function ProjectDetailsPage({ params }: PageProps) {
                 key={index}
                 className="flex items-start gap-2.5 text-[13.5px] text-text-secondary"
               >
-                <ChevronRight className="w-4 h-4 text-accent mt-0.5" />
+                <ChevronRight className="w-4 h-4 text-accent mt-0.5 shrink-0" />
                 <span>{item}</span>
               </div>
             ))}
@@ -287,7 +288,7 @@ export default async function ProjectDetailsPage({ params }: PageProps) {
                 key={index}
                 className="flex items-start gap-2.5 text-[13.5px] text-text-secondary"
               >
-                <ChevronRight className="w-4 h-4 text-accent mt-0.5" />
+                <ChevronRight className="w-4 h-4 text-accent mt-0.5 shrink-0" />
                 <span>{item}</span>
               </div>
             ))}
@@ -298,35 +299,7 @@ export default async function ProjectDetailsPage({ params }: PageProps) {
       {project.gallery && project.gallery.length > 0 && (
         <div className="section mb-11">
           <SectionLabel>Gallery</SectionLabel>
-          <div className="grid gap-4 max-sm:grid-cols-1 sm:grid-cols-2 lg:grid-cols-2">
-            {project.gallery.map((shot, index) => (
-              <div key={index}>
-                <div className="rounded-sm overflow-hidden shadow bg-card">
-                  <div className="flex items-center gap-2 px-3 py-2 bg-card-hover/90 border-b border-foreground/10">
-                    <span className="h-2 w-2 rounded-full bg-[#ff5f56]" />
-                    <span className="h-2 w-2 rounded-full bg-[#ffbd2e]" />
-                    <span className="h-2 w-2 rounded-full bg-[#27c93f]" />
-                    <span className="text-[10px] text-text-muted uppercase tracking-[2px] ml-2">
-                      {shot.label}
-                    </span>
-                  </div>
-                  <div className="aspect-[16/10] bg-card-hover">
-                    {shot.image ? (
-                      <img
-                        src={shot.image}
-                        alt={shot.label}
-                        className="w-full h-full object-cover"
-                      />
-                    ) : (
-                      <div className="h-full w-full flex items-center justify-center text-text-muted text-[12px] uppercase font-medium">
-                        Preview coming soon
-                      </div>
-                    )}
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
+          <ProjectGallery gallery={project.gallery} projectName={project.name} />
         </div>
       )}
 
@@ -343,30 +316,23 @@ export default async function ProjectDetailsPage({ params }: PageProps) {
               </span>
             ))}
           </div>
-          <div className="grid gap-2  md:grid-cols-3 text-[12.5px] text-text-secondary">
-            <div className="bg-secondary rounded-lg px-3 py-2">
-              <div className="text-[11px] uppercase tracking-[2px] font-bold text-secondary-text">
-                Role
+          <div className="flex flex-wrap gap-2 text-[12.5px]">
+            {[
+              { label: "Role", value: project.role },
+              { label: "Team", value: project.team },
+              { label: "Timeline", value: project.timeline },
+            ].map((item) => (
+              <div
+                key={item.label}
+                className="inline-flex items-center gap-2 rounded-full bg-white px-3 py-1 text-[12px] font-medium text-slate-900 shadow-sm"
+              >
+                <span className="text-[10px] uppercase tracking-[1.5px] text-primary-text">
+                  {item.label}
+                </span>
+                <span className="h-1 w-1 rounded-full bg-slate-400" aria-hidden />
+                <span className="text-slate-900/80">{item.value}</span>
               </div>
-              <span className="text-secondary-text/60">
-                
-              {project.role}
-              </span>
-            </div>
-            <div className="bg-secondary rounded-lg px-3 py-2">
-              <div className="text-[11px] uppercase tracking-[2px] font-bold text-secondary-text">
-                Team
-              </div>
-              <span className="text-secondary-text/60">
-                {project.team}
-              </span>
-            </div>
-            <div className="bg-secondary rounded-lg px-3 py-2">
-              <div className="text-[11px] uppercase tracking-[2px] font-bold text-secondary-text">
-                Timeline
-              </div>
-              <span className="text-secondary-text/60">{project.timeline}</span>
-            </div>
+            ))}
           </div>
         </Card>
       </div>

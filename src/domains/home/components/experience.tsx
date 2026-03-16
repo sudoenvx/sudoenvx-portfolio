@@ -69,7 +69,7 @@ export const Experience = () => {
                                 {exp.highlights.map((highlight, hIndex) => (
                                     <div key={hIndex} className="flex items-start gap-2.5 text-[13px] text-text-secondary">
                                         <span className="text-accent text-xs mt-0.5">
-                                            <ChevronRight className="w-4 h-4"  />
+                                            <ChevronRight className="w-4 h-4 shrink-0" />
                                         </span>
                                         {highlight}
                                     </div>

@@ -90,7 +90,10 @@ export const projects: Project[] = [
         role: "Fullstack Developer",
         timeline: "Aug 2023 - Dec 2023",
         team: "Solo Project",
-        stack: ["Next.js", "Shopify API", "Redis", "Vercel"],
+        stack: [
+            "Next.js", "Shopify API", "Redis", "Vercel",
+            "Tailwind CSS", "TypeScript", "Node.js"
+        ],
         overview:
             "A headless commerce storefront that prioritizes speed, SEO, and a frictionless checkout. The system combines a fast static front end with a cache-aware API layer.",
         motivation:

@@ -92,7 +92,7 @@ export const Navbar = () => {
                                 >
                                     <span>{item.label}</span>
                                     <span className="text-[14px] uppercase tracking-[2px] text-secondary-text/70">
-                                        <ChevronRight className="w-5 h-5" />
+                                        <ChevronRight className="w-5 h-5 shrink-0" />
                                     </span>
                                 </Link>
                             ))}
