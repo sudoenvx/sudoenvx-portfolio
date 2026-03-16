@@ -9,7 +9,7 @@ export const ContactForm = () => {
     return (
         <div className="section mb-11">
             <SectionLabel>Contact</SectionLabel>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-sm:gap-8">
                 <div>
                     <h3 className="text-3xl font-bold text-secondary mb-4 leading-tight">
                         Let&apos;s build something <br />

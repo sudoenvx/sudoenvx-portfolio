@@ -298,24 +298,33 @@ export default async function ProjectDetailsPage({ params }: PageProps) {
       {project.gallery && project.gallery.length > 0 && (
         <div className="section mb-11">
           <SectionLabel>Gallery</SectionLabel>
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-2">
+          <div className="grid gap-4 max-sm:grid-cols-1 sm:grid-cols-2 lg:grid-cols-2">
             {project.gallery.map((shot, index) => (
-              <Card key={index} className="rounded-[14px] p-3 bg-card">
-                <div className="aspect-[4/3] rounded-[10px] bg-card-hover flex items-center justify-center text-text-muted text-[12px] font-medium">
-                  {shot.image ? (
-                    <img
-                      src={shot.image}
-                      alt={shot.label}
-                      className="w-full h-full object-cover"
-                    />
-                  ) : (
-                    <span>{shot.label}</span>
-                  )}
+              <div key={index}>
+                <div className="rounded-sm overflow-hidden shadow bg-card">
+                  <div className="flex items-center gap-2 px-3 py-2 bg-card-hover/90 border-b border-foreground/10">
+                    <span className="h-2 w-2 rounded-full bg-[#ff5f56]" />
+                    <span className="h-2 w-2 rounded-full bg-[#ffbd2e]" />
+                    <span className="h-2 w-2 rounded-full bg-[#27c93f]" />
+                    <span className="text-[10px] text-text-muted uppercase tracking-[2px] ml-2">
+                      {shot.label}
+                    </span>
+                  </div>
+                  <div className="aspect-[16/10] bg-card-hover">
+                    {shot.image ? (
+                      <img
+                        src={shot.image}
+                        alt={shot.label}
+                        className="w-full h-full object-cover"
+                      />
+                    ) : (
+                      <div className="h-full w-full flex items-center justify-center text-text-muted text-[12px] uppercase font-medium">
+                        Preview coming soon
+                      </div>
+                    )}
+                  </div>
                 </div>
-                <div className="mt-3 text-[11px] uppercase text-center tracking-[2px] text-text-muted">
-                  {shot.label}
-                </div>
-              </Card>
+              </div>
             ))}
           </div>
         </div>
@@ -334,7 +343,7 @@ export default async function ProjectDetailsPage({ params }: PageProps) {
               </span>
             ))}
           </div>
-          <div className="grid gap-2 md:grid-cols-3 text-[12.5px] text-text-secondary">
+          <div className="grid gap-2  md:grid-cols-3 text-[12.5px] text-text-secondary">
             <div className="bg-secondary rounded-lg px-3 py-2">
               <div className="text-[11px] uppercase tracking-[2px] font-bold text-secondary-text">
                 Role

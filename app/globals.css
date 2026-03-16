@@ -20,6 +20,8 @@
   --nav-text: #0f0f0f;
   --nav-muted: #3b3b3b;
   --nav-divider: #000000;
+  
+  --border: #d7d7d7;
 }
 
 @theme inline {
@@ -39,6 +41,8 @@
   --color-nav-text: var(--nav-text);
   --color-nav-muted: var(--nav-muted);
   --color-nav-divider: var(--nav-divider);
+
+  --color-border: var(--border);
 }
 
 @font-face {

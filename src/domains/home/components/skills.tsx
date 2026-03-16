@@ -35,7 +35,7 @@ export const Skills = () => {
     return (
         <div className="section mb-11">
             <SectionLabel>Professional Skills</SectionLabel>
-            <div className="grid grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {categories.map((category, index) => (
                     <Card key={index} className="rounded-2xl p-5 transition-colors bg-card">
                         <div className="flex items-center gap-3 mb-4">

@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Github, Linkedin, Mail, FileIcon } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import Link from "next/link";
 
@@ -24,6 +24,11 @@ export const Contact = () => {
             icon: <Github className="w-3.75 h-3.75" />,
             text: "GitHub",
             href: "https://github.com/sudoenvx"
+        },
+        {
+            icon: <FileIcon className="w-3.75 h-3.75" />,
+            text: "My CV",
+            href: "/resume.pdf"
         }
     ];
 

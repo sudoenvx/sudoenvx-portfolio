@@ -1,4 +1,4 @@
-import { Monitor, Star, Users } from "lucide-react";
+import { CodeIcon, Monitor, ServerIcon, Star, Users } from "lucide-react";
 import { SectionLabel } from "./section-label";
 import { Card } from "@/components/ui/card";
 
@@ -9,9 +9,9 @@ interface MetaItem {
 
 export const AboutCard = () => {
     const metaItems: MetaItem[] = [
-        { icon: <Monitor className="w-[15px] h-[15px]" />, text: "8+ Years Experience" },
-        { icon: <Users className="w-[15px] h-[15px]" />, text: "Teams Led & Mentored" },
-        { icon: <Star className="w-[15px] h-[15px]" />, text: "Open Source Contributor" }
+        { icon: <Monitor className="w-[15px] h-[15px]" />, text: "6+ Years Experience" },
+        { icon: <CodeIcon className="w-[15px] h-[15px]" />, text: "Fullstack Engineer" },
+        { icon: <ServerIcon className="w-[15px] h-[15px]" />, text: "Backend & System Architecture" }
     ];
 
     return (
@@ -19,10 +19,11 @@ export const AboutCard = () => {
             <SectionLabel>About</SectionLabel>
             <Card className="rounded-[14px] p-5 relative overflow-hidden bg-card">
                 <p className="text-[14.5px] text-text-secondary leading-[1.85] font-light">
-                    I&apos;m a Senior Frontend Engineer with 8+ years of hands-on experience building
-                    scalable, accessible web applications. My work spans enterprise SaaS platforms,
-                    healthcare portals, and e-commerce systems — always with a focus on performance,
-                    clean code, and exceptional user experience.
+                    I&apos;m a <b className="text-primary">Fullstack Software Engineer</b> with <b className="text-primary">6+ years</b> of experience
+                    building scalable SaaS platforms and modern web applications.
+                    My work focuses on backend architecture, API design, and
+                    maintainable system structures, while still delivering
+                    clean and accessible user interfaces.
                 </p>
                 <p className="text-[14.5px] text-text-secondary leading-[1.85] font-light mt-3.5">
                     I thrive in collaborative environments, leading cross-functional teams and
