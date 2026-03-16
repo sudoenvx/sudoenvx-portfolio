@@ -38,7 +38,7 @@ export const Contact = () => {
                     as="a"
                     key={index}
                     href={link.href}
-                    className="inline-flex items-center gap-2 rounded-full px-[18px] py-1.5 bg-secondary text-secondary-text hover:bg-primary no-underline text-[13px] transition-colors hover:text-accent font-bold"
+                    className="inline-flex items-center gap-2 rounded-full px-[18px] py-1.5 bg-secondary text-secondary-text hover:bg-primary no-underline text-[13px] transition-colors hover:text-accent"
                 >
                     {link.icon}
                     {link.text}
