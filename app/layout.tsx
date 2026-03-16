@@ -17,7 +17,7 @@ export default function RootLayout({
       <head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link type="image/png" sizes="16x16" rel="icon" href="/icons/port.png" />
+        <link type="image/png" sizes="16x16" rel="icon" href="/icons/port-me.png" />
       </head>
       <body
         className={`antialiased`}

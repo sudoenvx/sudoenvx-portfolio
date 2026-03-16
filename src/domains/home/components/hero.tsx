@@ -14,7 +14,7 @@ export const Hero = () => {
 
     return (
         <div className="text-center mb-[58px] relative">
-            <h1 className="font-playfair text-[36px] font-bold text-text-primary tracking-[-0.5px] mb-1.5">
+            <h1 className="text-[36px] font-bold text-white tracking-[-0.5px] mb-1.5">
                 Ali Tarek
             </h1>
             <div className="text-[15px] text-primary mb-[18px] opacity-85">

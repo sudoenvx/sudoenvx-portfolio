@@ -7,10 +7,9 @@ export const Navbar = () => {
                 <div className="max-sm:mx-4 bg-nav backdrop-blur rounded-xl px-4 h-14 flex items-center justify-between">
                     <Link
                         href="/"
-                        className="group relative font-bold text-lg sm:text-xl text-nav-text tracking-tight"
+                        className="relative font-bold text-lg sm:text-xl text-nav-text tracking-tight"
                     >
                         Ali Tarek
-                        <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full"></span>
                     </Link>
 
                     <div className="flex items-center gap-6 sm:gap-8">

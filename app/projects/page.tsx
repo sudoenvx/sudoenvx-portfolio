@@ -18,7 +18,7 @@ export default function ProjectsPage() {
         <div className="text-[12px] uppercase tracking-[3px] text-primary font-jetbrains mb-3">
           Portfolio
         </div>
-        <h1 className="font-playfair text-[32px] font-bold text-text-primary mb-3">
+        <h1 className="text-[32px] font-bold text-white mb-3">
           Featured Projects
         </h1>
         <p className="text-[15px] text-text-secondary max-w-[620px] mx-auto leading-[1.7] font-light">

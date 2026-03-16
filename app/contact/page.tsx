@@ -14,7 +14,7 @@ export default function ContactPage() {
         <div className="text-[12px] uppercase tracking-[3px] text-primary font-jetbrains mb-3">
           Contact
         </div>
-        <h1 className="font-playfair text-[34px] font-bold text-text-primary mb-3">
+        <h1 className="text-[34px] font-bold text-white mb-3">
           Let&apos;s Build Something Great
         </h1>
         <p className="text-[15px] text-text-secondary max-w-[620px] mx-auto leading-[1.7] font-light">
