@@ -4,7 +4,7 @@ export const Navbar = () => {
     return (
         <nav className="fixed top-4 left-0 right-0 z-50">
             <div className="max-w-205 mx-auto">
-                <div className="bg-nav backdrop-blur border border-nav-divider/60 rounded-xl px-4 h-14 flex items-center justify-between">
+                <div className="max-sm:mx-4 bg-nav backdrop-blur rounded-xl px-4 h-14 flex items-center justify-between">
                     <Link
                         href="/"
                         className="group relative font-bold text-lg sm:text-xl text-nav-text tracking-tight"
@@ -28,7 +28,7 @@ export const Navbar = () => {
                                 Projects
                             </Link>
                             <Link
-                                href="/#contact"
+                                href="/contact"
                                 className="hover:text-nav-text transition-colors relative group py-2"
                             >
                                 Contact

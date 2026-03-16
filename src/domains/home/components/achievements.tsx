@@ -35,7 +35,7 @@ export const Achievements = () => {
     return (
         <div className="section mb-11">
             <SectionLabel>Achievements</SectionLabel>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+            <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
                 {achievements.map((achievement, index) => (
                     <Card
                         key={index}
