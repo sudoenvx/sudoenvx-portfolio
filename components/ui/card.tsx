@@ -1,24 +1,26 @@
 import * as React from "react";
-
 import { cn } from "@/lib/utils";
 
-type CardProps<T extends React.ElementType = "div"> = {
-    as?: T;
+type CardProps = {
+    as?: keyof React.JSX.IntrinsicElements;
     className?: string;
-} & Omit<React.ComponentPropsWithoutRef<T>, "as" | "className">;
+    [key: string]: unknown;
+};
 
-export const Card = React.forwardRef(
-    <T extends React.ElementType = "div">(
-        { as, className, ...props }: CardProps<T>,
-        ref: React.ForwardedRef<React.ElementRef<T>>
-    ) => {
-        const Component = as || "div";
-        return (
-            <Component ref={ref} className={cn("bg-bg-card", className)} {...props} />
-        );
+export function Card({ as = "div", className, ...props }: CardProps) {
+    const classes = cn("bg-bg-card", className);
+
+    if (as === "section") {
+        return <section className={classes} {...props} />;
     }
-) as <T extends React.ElementType = "div">(
-    props: CardProps<T> & { ref?: React.ForwardedRef<React.ElementRef<T>> }
-) => React.ReactElement | null;
+    if (as === "article") {
+        return <article className={classes} {...props} />;
+    }
+    if (as === "main") {
+        return <main className={classes} {...props} />;
+    }
+    // Add more elements as needed
 
-Card.displayName = "Card";
+    // Default to div
+    return <div className={classes} {...props} />;
+}
