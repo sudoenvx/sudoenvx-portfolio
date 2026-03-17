@@ -8,19 +8,19 @@ interface Stat {
 export const Stats = () => {
     const stats: Stat[] = [
         {
-            value: "8+",
+            value: "6+",
             label: "Years Experience"
         },
         {
-            value: "50+",
+            value: "10+",
             label: "Projects Completed"
         },
         {
-            value: "20+",
+            value: "10+",
             label: "Happy Clients"
         },
         {
-            value: "10k+",
+            value: "240",
             label: "Commits Pushed"
         }
     ];

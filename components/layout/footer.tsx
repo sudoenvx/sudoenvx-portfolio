@@ -9,8 +9,8 @@ export const Footer = () => {
                 <div className="flex items-center gap-2 text-[13px] text-secondary-text">
                     <span className="hidden sm:inline">Open for collaborations</span>
                     <span className="hidden sm:inline">•</span>
-                    <a href="mailto:hello@sudoenvx.com" className="bg-primary text-primary-text px-4 py-1 rounded-full hover:bg-primary/80 transition-colors">
-                        hello@sudoenvx.com
+                    <a href="mailto:sudoenvx@gmail.com" className="bg-primary text-primary-text px-4 py-1 rounded-full hover:bg-primary/80 transition-colors">
+                        sudoenvx@gmail.com
                     </a>
                 </div>
             </div>

@@ -1,7 +1,7 @@
 
 const contact = {
     email: "sudoenvx@gmail.com",
-    phone: "+20123456789",
+    phone: "+201288362183",
     linkedin: "https://www.linkedin.com/in/sudoenvx/",
     github: "https://github.com/sudoenvx",
 }

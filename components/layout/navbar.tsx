@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { Github, Download, Menu, X, ChevronRight } from "lucide-react";
+import { AppConfig } from "@/src/data/app";
 
 const navItems = [
     { href: "/", label: "Home" },
@@ -41,7 +42,7 @@ export const Navbar = () => {
 
                         <div className="flex items-center gap-4">
                             <a
-                                href="https://github.com/sudoenvx"
+                                href={AppConfig.contact.github}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="hidden sm:flex text-nav-muted hover:text-nav-text transition-colors"
@@ -49,7 +50,8 @@ export const Navbar = () => {
                                 <Github className="w-5 h-5" />
                             </a>
                             <a
-                                href="#" // Replace with actual resume link
+                                href="/documents/cv-original.pdf"
+                                download="alitarek-cv.pdf"
                                 className="hidden sm:flex items-center gap-2 bg-primary text-primary-text hover:bg-primary/90 px-3 py-1.5 rounded-full text-xs font-medium transition-colors"
                             >
                                 <span>My CV</span>

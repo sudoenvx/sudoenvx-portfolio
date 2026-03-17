@@ -115,7 +115,7 @@ export const ContactForm = () => {
                             aria-live="polite"
                             className={`rounded-xl border-2 px-4 py-3 ${
                                 status.type === "success"
-                                    ? "border-primary/40 bg-card"
+                                    ? "border-primary/60 bg-card"
                                     : "border-[#d64550] bg-card"
                             }`}
                         >
@@ -123,7 +123,7 @@ export const ContactForm = () => {
                                 className={`text-[11px] uppercase tracking-[2px] font-jetbrains ${
                                     status.type === "success"
                                         ? "text-primary"
-                                        : "text-red-400"
+                                        : "text-[#d64550]"
                                 }`}
                             >
                                 {status.type === "success" ? "Message sent" : "Send failed"}
