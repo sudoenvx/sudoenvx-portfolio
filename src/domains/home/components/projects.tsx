@@ -8,10 +8,11 @@ export const Projects = () => {
     return (
         <div className="section mb-11">
             <SectionLabel>Projects</SectionLabel>
-            {projects.map((project, index) => (
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {projects.map((project, index) => (
                 <Card
                     key={index}
-                    className="rounded-[14px] p-5 mb-3 transition-colors bg-card hover:bg-card-hover relative overflow-hidden group"
+                    className="rounded-[14px] p-5 transition-colors bg-card hover:bg-card-hover relative overflow-hidden group"
                 >
                     <div className="flex justify-between items-start gap-4 mb-2">
                         <Link href={`/projects/${project.id}`} className="block">
@@ -63,6 +64,7 @@ export const Projects = () => {
                     </div>
                 </Card>
             ))}
+            </div>
             <div className="flex justify-center mt-6">
                 <Link
                     href="/projects"

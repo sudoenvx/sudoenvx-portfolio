@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowUpRight, ExternalLink, Github } from "lucide-react";
+import { ExternalLink, Github } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { SectionLabel } from "@/src/domains/home/components/section-label";
 import { projects } from "@/src/data/projects";
@@ -21,7 +21,7 @@ export default function ProjectsPage() {
         <h1 className="text-[32px] font-bold text-white mb-3">
           Featured Projects
         </h1>
-        <p className="text-[15px] text-text-secondary max-w-[620px] mx-auto leading-[1.7] font-light">
+        <p className="text-[15px] text-text-secondary max-w-155 mx-auto leading-[1.7] font-light">
           A focused collection of work spanning analytics platforms, headless
           commerce, and offline-first experiences.
         </p>
@@ -43,9 +43,7 @@ export default function ProjectsPage() {
                   >
                     {project.name}
                   </Link>
-                  <div className="text-[12px] text-text-muted mt-1">
-                    {project.role} - {project.team} - {project.timeline}
-                  </div>
+
                 </div>
                 <div className="flex shrink-0 bg-secondary rounded-md overflow-hidden">
                   {project.github && (
@@ -56,7 +54,7 @@ export default function ProjectsPage() {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <Github className="w-[17px] h-[17px]" />
+                      <Github className="w-4.25 h-4.25" />
                     </a>
                   )}
                   {project.demo && (
@@ -67,7 +65,7 @@ export default function ProjectsPage() {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <ExternalLink className="w-[17px] h-[17px]" />
+                      <ExternalLink className="w-4.25 h-4.25" />
                     </a>
                   )}
                 </div>
@@ -77,7 +75,7 @@ export default function ProjectsPage() {
                 {project.shortDescription}
               </p>
 
-              <div className="flex flex-wrap gap-1.5 mb-4">
+              <div className="flex flex-wrap gap-1.5">
                 {project.stack.map((tag, tagIndex) => (
                   <span
                     key={tagIndex}
@@ -88,13 +86,13 @@ export default function ProjectsPage() {
                 ))}
               </div>
 
-              <Link
+              {/* <Link
                 href={`/projects/${project.id}`}
                 className="inline-flex items-center gap-1.5 text-[13px] font-medium text-secondary hover:text-primary transition-colors"
               >
                 View project details
                 <ArrowUpRight className="w-3.5 h-3.5" />
-              </Link>
+              </Link> */}
             </Card>
           ))}
         </div>
