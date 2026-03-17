@@ -50,7 +50,7 @@ export const Navbar = () => {
                                 <Github className="w-5 h-5" />
                             </a>
                             <a
-                                href="/documents/cv-original.pdf"
+                                href="/documents/alitarek-cv.pdf"
                                 download="alitarek-cv.pdf"
                                 className="hidden sm:flex items-center gap-2 bg-primary text-primary-text hover:bg-primary/90 px-3 py-1.5 rounded-full text-xs font-medium transition-colors"
                             >
