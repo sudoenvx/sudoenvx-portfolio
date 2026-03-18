@@ -21,14 +21,7 @@ export const metadata: Metadata = {
     description: "Building scalable SaaS platforms and backend systems.",
     url: "https://portenvx.vercel.app",
     siteName: "Ali Tarek Portfolio",
-    images: [
-      {
-        url: "/icons/port-me.png",
-        width: 1000,
-        height: 1000,
-        alt: "Ali Tarek Portfolio",
-      },
-    ],
+    images: ["https://portenvx.vercel.app/og"],
     locale: "en_US",
     type: "website",
   },
@@ -37,13 +30,13 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Ali Tarek - Fullstack Engineer",
     description: "Building scalable SaaS platforms and backend systems.",
-    images: ["/icons/port-me.png"],
+    images: ["https://portenvx.vercel.app/og"]
   },
 
   icons: {
     icon: [
-      { url: "/icons/port-fav.png", sizes: "16x16", type: "image/png" },
-      { url: "/icons/port.png", sizes: "100x100", type: "image/png" },
+      { url: "/icons/port-me.png", sizes: "16x16", type: "image/png" },
+      { url: "/icons/port-me.png", sizes: "100x100", type: "image/png" },
     ],
     apple: [{ url: "/icons/port-me.png" }],
   },
