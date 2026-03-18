@@ -13,89 +13,78 @@ export async function GET() {
     (
       <div
         style={{
-          width: "100%",
-          height: "100%",
+          width: "1200px",
+          height: "630px",
           display: "flex",
-          flexDirection: "column",
-          justifyContent: "space-between",
-          backgroundColor: "#161616",
+          alignItems: "center",
+          backgroundColor: "#262626",
           color: "#ffffff",
-          padding: "46px 46px",
+          padding: "90px",
           fontFamily: "sqmarket, sans-serif",
           position: "relative",
           overflow: "hidden",
         }}
       >
-  
-
         <div
           style={{
             position: "relative",
             display: "flex",
             flexDirection: "column",
-            gap: "26px",
+            gap: "18px",
+            maxWidth: "900px",
           }}
         >
-          <div style={{ display: "flex", gap: "12px", alignItems: "center" }}>
+          <div style={{ display: "flex", alignItems: "center", gap: "14px" }}>
             <div
               style={{
-                backgroundColor: "#9FD356",
-                color: "#0f0f0f",
-                padding: "8px 16px",
+                width: "54px",
+                height: "4px",
                 borderRadius: "999px",
-                fontSize: "18px",
-                fontWeight: 600,
+                backgroundColor: "#9FD356",
+              }}
+            />
+            <div
+              style={{
+                fontSize: "22px",
+                color: "#C8D0C3",
+                letterSpacing: "2px",
+                textTransform: "uppercase",
               }}
             >
               @sudoenvx
             </div>
-            <div
-              style={{
-                backgroundColor: "#fff",
-                color: "#000",
-                padding: "8px 16px",
-                borderRadius: "999px",
-                fontSize: "18px",
-                // border: "1px solid #2a2a2a",
-              }}
-            >
-              Available for opportunities
-            </div>
           </div>
 
-          <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
-            <div
-              style={{
-                fontSize: "60px",
-                fontWeight: 700,
-                letterSpacing: "-2px",
-              }}
-            >
-              Ali Tarek
-            </div>
-            <div
-              style={{
-                fontSize: "34px",
-                color: "#9FD356",
-                fontWeight: 600,
-              }}
-            >
-              Fullstack Engineer / System Architect
-            </div>
+          <div
+            style={{
+              fontSize: "72px",
+              fontWeight: 700,
+              letterSpacing: "-2.5px",
+              lineHeight: "1.05",
+            }}
+          >
+            Ali Tarek
           </div>
-        </div>
 
-        <div
-          style={{
-            position: "relative",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "space-between",
-            color: "#b9b9b9",
-            fontSize: "20px",
-          }}
-        >
-          <div>Alexandria, Egypt</div>
+          <div
+            style={{
+              fontSize: "34px",
+              color: "#9FD356",
+              fontWeight: 600,
+              lineHeight: "1.2",
+            }}
+          >
+            Fullstack Engineer · System Architect
+          </div>
+
+          <div
+            style={{
+              fontSize: "22px",
+              color: "#B6BCC7",
+            }}
+          >
+            Alexandria, Egypt
+          </div>
         </div>
       </div>
     ),

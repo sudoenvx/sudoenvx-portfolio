@@ -21,16 +21,22 @@ export const metadata: Metadata = {
     description: "Building scalable SaaS platforms and backend systems.",
     url: "https://portenvx.vercel.app",
     siteName: "Ali Tarek Portfolio",
-    images: ["https://portenvx.vercel.app/og"],
+    images: ["https://portenvx.vercel.app/og?v=4"],
     locale: "en_US",
     type: "website",
   },
+  
 
   twitter: {
     card: "summary_large_image",
     title: "Ali Tarek - Fullstack Engineer",
     description: "Building scalable SaaS platforms and backend systems.",
-    images: ["https://portenvx.vercel.app/og"]
+    images: ["https://portenvx.vercel.app/og?v=4"]
+  },
+
+  viewport: {
+    width: "device-width",
+    initialScale: 1,
   },
 
   icons: {
