@@ -5,6 +5,7 @@ import { ContactForm } from "@/src/domains/home/components/contact-form";
 import { Experience } from "@/src/domains/home/components/experience";
 import { Hero } from "@/src/domains/home/components/hero";
 import { Projects } from "@/src/domains/home/components/projects";
+import { Services } from "@/src/domains/home/components/services";
 import { Skills } from "@/src/domains/home/components/skills";
 import { Stats } from "@/src/domains/home/components/stats";
 import { Testimonials } from "@/src/domains/home/components/testimonials";
@@ -16,6 +17,7 @@ export default function Home() {
       <Stats />
       <AboutCard />
       <Skills />
+      <Services />
       <Experience />
       <Projects />
       <Testimonials />
