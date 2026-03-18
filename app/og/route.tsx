@@ -20,7 +20,7 @@ export async function GET() {
           justifyContent: "space-between",
           backgroundColor: "#161616",
           color: "#ffffff",
-          padding: "40px 40px",
+          padding: "46px 46px",
           fontFamily: "sqmarket, sans-serif",
           position: "relative",
           overflow: "hidden",
@@ -100,8 +100,8 @@ export async function GET() {
       </div>
     ),
     {
-      width: 1000,
-      height: 400,
+      width: 1200,
+      height: 630,
       fonts: [
         {
           name: "sqmarket",
